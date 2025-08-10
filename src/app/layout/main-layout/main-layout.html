@@ -1,0 +1,25 @@
+<div class="app-container">
+  <!-- Header Component -->
+  <app-header (logout)="logout()"> </app-header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <!-- Page Content -->
+    <div class="page-content">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <!-- This would be populated by a breadcrumb service -->
+        </ol>
+      </nav>
+
+      <!-- Router Outlet - Where feature components load -->
+      <div class="content-area">
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Component -->
+  <app-footer [lastUpdated]="lastUpdated()" [systemStatus]="systemStatus()">
+  </app-footer>
+</div>

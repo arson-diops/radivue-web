@@ -1,0 +1,135 @@
+.app-footer {
+  background-color: var(--footer-bg);
+  border-top: 1px solid var(--footer-border);
+  padding: 1rem 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info,
+.footer-status {
+  display: flex;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.footer-info {
+  gap: 1rem;
+}
+
+.footer-status {
+  gap: 0.5rem;
+}
+
+.status-indicator {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+  &.local {
+    background-color: rgba(224, 242, 254, 0.8); // fallback
+    color: var(--env-local-fg);
+    @supports (
+      background-color: color-mix(in srgb, white 80%, transparent 20%)
+    ) {
+      background-color: color-mix(
+        in srgb,
+        var(--env-local-bg) 80%,
+        transparent 20%
+      );
+    }
+  }
+
+  &.preview {
+    background-color: rgba(254, 249, 195, 0.8);
+    color: var(--env-preview-fg);
+    @supports (
+      background-color: color-mix(in srgb, white 80%, transparent 20%)
+    ) {
+      background-color: color-mix(
+        in srgb,
+        var(--env-preview-bg) 80%,
+        transparent 20%
+      );
+    }
+  }
+
+  &.develop {
+    background-color: rgba(209, 250, 229, 0.8);
+    color: var(--env-develop-fg);
+    @supports (
+      background-color: color-mix(in srgb, white 80%, transparent 20%)
+    ) {
+      background-color: color-mix(
+        in srgb,
+        var(--env-develop-bg) 80%,
+        transparent 20%
+      );
+    }
+  }
+
+  &.staging {
+    background-color: rgba(237, 233, 254, 0.8);
+    color: var(--env-staging-fg);
+    @supports (
+      background-color: color-mix(in srgb, white 80%, transparent 20%)
+    ) {
+      background-color: color-mix(
+        in srgb,
+        var(--env-staging-bg) 80%,
+        transparent 20%
+      );
+    }
+  }
+
+  &.production {
+    background-color: rgba(254, 226, 226, 0.8);
+    color: var(--env-production-fg);
+    @supports (
+      background-color: color-mix(in srgb, white 80%, transparent 20%)
+    ) {
+      background-color: color-mix(
+        in srgb,
+        var(--env-production-bg) 80%,
+        transparent 20%
+      );
+    }
+  }
+
+  &.online {
+    background-color: rgba(22, 163, 74, 0.8);
+    color: var(--status-online-fg);
+    @supports (
+      background-color: color-mix(in srgb, white 80%, transparent 20%)
+    ) {
+      background-color: color-mix(
+        in srgb,
+        var(--status-online-bg) 80%,
+        transparent 20%
+      );
+    }
+  }
+
+  &.offline {
+    background-color: rgba(220, 38, 38, 0.8);
+    color: var(--status-offline-fg);
+    @supports (
+      background-color: color-mix(in srgb, white 80%, transparent 20%)
+    ) {
+      background-color: color-mix(
+        in srgb,
+        var(--status-offline-bg) 80%,
+        transparent 20%
+      );
+    }
+  }
+}

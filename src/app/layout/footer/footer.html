@@ -1,0 +1,23 @@
+<footer class="app-footer">
+  <div class="footer-content">
+    <div class="footer-info">
+      <span>RadiVue v{{ version() }}</span>
+      <span>|</span>
+      <span>Built: {{ buildDate() | date: "short" }}</span>
+      <span>|</span>
+      <span>Last Updated: {{ lastUpdated | date: "medium" }}</span>
+    </div>
+    <div class="footer-status">
+      <span class="status-indicator" [ngClass]="systemStatus.toLowerCase()">
+        {{ systemStatus }}
+      </span>
+      <span>|</span>
+      <span
+        class="status-indicator"
+        [ngClass]="isOnline() ? 'online' : 'offline'"
+      >
+        {{ isOnline() ? "Online" : "Offline" }}
+      </span>
+    </div>
+  </div>
+</footer>

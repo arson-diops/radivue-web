@@ -1,0 +1,19 @@
+<header class="app-header">
+  <div class="header-content">
+    <div class="logo-section">
+      <h1 class="app-title">RadiVue</h1>
+      <span class="app-subtitle">Radiological Survey Management</span>
+    </div>
+
+    <nav class="main-nav">
+      <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+      <a routerLink="/plans" routerLinkActive="active" class="nav-link">Plans</a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <app-theme-toggle [compact]="true"></app-theme-toggle>
+    </div>
+  </div>
+</header>

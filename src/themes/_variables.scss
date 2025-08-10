@@ -1,0 +1,143 @@
+// Base theme variables
+:root {
+  // Branding Colors - Expanded Palette
+  --brand-primary: #be123c; // Atomic red
+  --brand-primary-light: #f87171; // Light atomic red
+  --brand-primary-dark: #991b1b; // Dark atomic red
+  --brand-primary-50: #fef2f2; // Very light red tint
+  --brand-primary-100: #fecaca; // Light red tint
+  --brand-primary-900: #7f1d1d; // Very dark red
+
+  --brand-secondary: #525252; // Research gray
+  --brand-secondary-light: #9ca3af; // Light research gray
+  --brand-secondary-dark: #374151; // Dark research gray
+  --brand-secondary-50: #f9fafb; // Very light gray tint
+  --brand-secondary-100: #f3f4f6; // Light gray tint
+  --brand-secondary-900: #111827; // Very dark gray
+
+  --brand-accent: #f97316; // Energy orange
+  --brand-accent-light: #fed7aa; // Light energy orange
+  --brand-accent-dark: #ea580c; // Dark energy orange
+  --brand-accent-50: #fff7ed; // Very light orange tint
+  --brand-accent-100: #ffedd5; // Light orange tint
+  --brand-accent-900: #9a3412; // Very dark orange
+
+  // Additional Brand Colors for Variety
+  --brand-tertiary: #0ea5e9; // Nuclear blue
+  --brand-tertiary-light: #7dd3fc; // Light nuclear blue
+  --brand-tertiary-dark: #0284c7; // Dark nuclear blue
+
+  --brand-quaternary: #10b981; // Safety green
+  --brand-quaternary-light: #6ee7b7; // Light safety green
+  --brand-quaternary-dark: #059669; // Dark safety green
+
+  --brand-purple: #8b5cf6; // Radiation purple
+  --brand-purple-light: #c4b5fd; // Light radiation purple
+  --brand-purple-dark: #7c3aed; // Dark radiation purple
+
+  // Semantic Colors - Expanded
+  --color-success: #16a34a;
+  --color-success-light: #4ade80;
+  --color-success-dark: #15803d;
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+
+  --color-warning: #f59e0b;
+  --color-warning-light: #fbbf24;
+  --color-warning-dark: #d97706;
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+
+  --color-danger: #dc2626;
+  --color-danger-light: #f87171;
+  --color-danger-dark: #b91c1c;
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fecaca;
+
+  --color-info: #0ea5e9;
+  --color-info-light: #38bdf8;
+  --color-info-dark: #0284c7;
+  --color-info-50: #f0f9ff;
+  --color-info-100: #e0f2fe;
+
+  // Nuclear-specific Color Variants
+  --color-radiation: #eab308; // Radiation warning yellow
+  --color-radiation-light: #fde047;
+  --color-radiation-dark: #ca8a04;
+
+  --color-containment: #155e75; // Containment teal
+  --color-containment-light: #22d3ee;
+  --color-containment-dark: #0f4c5c;
+
+  --color-detection: #7c2d12; // Detection red-orange
+  --color-detection-light: #fb923c;
+  --color-detection-dark: #9a3412;
+
+  // Neutral Colors
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+
+  // Spacing
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  // Border Radius
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.75rem;
+
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  // Typography - Three font system
+  --font-family-display: "Red Rose", cursive; // For h1, titles, branding
+  --font-family-accent: "Domine", serif; // For special/accent text
+  --font-family-body: "Noto Sans", sans-serif; // For normal text/body
+  --font-family-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
+
+  // Legacy compatibility
+  --font-family-primary: var(--font-family-body); // Default to body font
+  --font-family-sans: var(--font-family-body);
+  --font-family-serif: var(--font-family-accent);
+
+  // Font Sizes
+  --text-xs: 0.75rem; // 12px
+  --text-sm: 0.875rem; // 14px
+  --text-md: 1rem; // 16px
+  --text-lg: 1.125rem; // 18px
+  --text-xl: 1.25rem; // 20px
+  --text-2xl: 1.5rem; // 24px
+  --text-3xl: 1.875rem; // 30px
+  --text-4xl: 2.25rem; // 36px
+
+  // Font Weights
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  // Line Heights
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+}

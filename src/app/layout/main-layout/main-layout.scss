@@ -1,0 +1,170 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100%;
+}
+
+// Light theme (default)
+:host,
+:host[data-theme="light"] {
+  // Surface Colors
+  --surface-primary: var(--color-white);
+  --surface-secondary: var(--color-gray-50);
+  --surface-tertiary: var(--color-gray-100);
+
+  // Background Colors
+  --bg-primary: var(--color-gray-50);
+  --bg-secondary: var(--color-white);
+  --bg-accent: var(--color-gray-100);
+
+  // Text Colors
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-600);
+  --text-tertiary: var(--color-gray-500);
+  --text-inverse: var(--color-white);
+
+  // Border Colors
+  --border-primary: var(--color-gray-200);
+  --border-secondary: var(--color-gray-300);
+  --border-focus: var(--brand-primary);
+
+  // Interactive States
+  --state-hover: rgba(37, 99, 235, 0.1);
+  --state-active: rgba(37, 99, 235, 0.2);
+  --state-disabled: var(--color-gray-100);
+
+  // Component Specific
+  --sidebar-bg: var(--surface-primary);
+  --sidebar-border: var(--border-primary);
+  --header-bg: var(--surface-primary);
+  --header-border: var(--border-primary);
+  --footer-bg: var(--surface-primary);
+  --footer-border: var(--border-primary);
+
+  // Button Variants
+  --btn-primary-bg: var(--brand-primary);
+  --btn-primary-text: var(--text-inverse);
+  --btn-primary-hover: #1d4ed8;
+
+  --btn-secondary-bg: var(--surface-tertiary);
+  --btn-secondary-text: var(--text-primary);
+  --btn-secondary-hover: var(--color-gray-200);
+
+  --btn-success-bg: var(--color-success);
+  --btn-success-text: var(--text-inverse);
+  --btn-success-hover: #15803d;
+
+  --btn-warning-bg: var(--color-warning);
+  --btn-warning-text: var(--text-inverse);
+  --btn-warning-hover: #d97706;
+
+  --btn-danger-bg: var(--color-danger);
+  --btn-danger-text: var(--text-inverse);
+  --btn-danger-hover: #b91c1c;
+
+  // Legacy mappings
+  --background-color: var(--bg-primary);
+  --surface-color: var(--surface-primary);
+  --border-color: var(--border-primary);
+}
+
+// Dark theme
+:host[data-theme="dark"] {
+  // Surface Colors
+  --surface-primary: var(--color-gray-900);
+  --surface-secondary: var(--color-gray-800);
+  --surface-tertiary: var(--color-gray-700);
+
+  // Background Colors
+  --bg-primary: var(--color-black);
+  --bg-secondary: var(--color-gray-900);
+  --bg-accent: var(--color-gray-800);
+
+  // Text Colors
+  --text-primary: var(--color-gray-100);
+  --text-secondary: var(--color-gray-300);
+  --text-tertiary: var(--color-gray-400);
+  --text-inverse: var(--color-gray-900);
+
+  // Border Colors
+  --border-primary: var(--color-gray-700);
+  --border-secondary: var(--color-gray-600);
+
+  // Interactive States
+  --state-hover: rgba(59, 130, 246, 0.1);
+  --state-active: rgba(59, 130, 246, 0.2);
+  --state-disabled: var(--color-gray-800);
+
+  // Component Specific
+  --header-bg: var(--surface-primary);
+  --header-border: var(--border-primary);
+  --footer-bg: var(--surface-primary);
+  --footer-border: var(--border-primary);
+
+  // Button Variants
+  --btn-secondary-bg: var(--surface-tertiary);
+  --btn-secondary-text: var(--text-primary);
+  --btn-secondary-hover: var(--color-gray-600);
+
+  --btn-success-bg: var(--color-success);
+  --btn-success-text: var(--color-white);
+  --btn-success-hover: #15803d;
+
+  --btn-warning-bg: var(--color-warning);
+  --btn-warning-text: var(--color-white);
+  --btn-warning-hover: #d97706;
+
+  --btn-danger-bg: var(--color-danger);
+  --btn-danger-text: var(--color-white);
+  --btn-danger-hover: #b91c1c;
+
+  // Legacy mappings
+  --background-color: var(--bg-primary);
+  --surface-color: var(--surface-primary);
+  --border-color: var(--border-primary);
+}
+
+.app-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.breadcrumb {
+  padding: 1rem 2rem;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: var(--bg-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}

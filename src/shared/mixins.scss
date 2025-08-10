@@ -1,0 +1,83 @@
+// Common mixins and utilities
+@mixin surface-elevation($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  } @else if $level == 2 {
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+  } @else if $level == 3 {
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  } @else if $level == 4 {
+    box-shadow:
+      0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+}
+
+@mixin focus-ring() {
+  outline: 2px solid var(--border-focus, #2563eb);
+  outline-offset: 2px;
+}
+
+@mixin button-variant($bg, $text, $hover) {
+  background-color: $bg;
+  color: $text;
+  border: 1px solid $bg;
+
+  &:hover:not(:disabled) {
+    background-color: $hover;
+    border-color: $hover;
+  }
+}
+
+// Add these mixins if they don't exist
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+@mixin spinner {
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@mixin button-primary {
+  background: var(--primary-color);
+  color: var(--primary-text);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// Utility classes
+.theme-transition {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}

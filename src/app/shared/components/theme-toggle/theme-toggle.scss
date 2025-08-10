@@ -1,0 +1,64 @@
+.theme-toggle {
+  display: flex;
+  background-color: var(--surface-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: 0.25rem;
+  gap: 0.125rem;
+
+  &.compact {
+    flex-direction: row;
+    width: fit-content;
+  }
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--state-hover);
+    color: var(--text-primary);
+  }
+
+  &.active {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    box-shadow: var(--shadow-sm);
+  }
+
+  i {
+    font-size: 1rem;
+    min-width: 1rem;
+  }
+
+  .compact & {
+    justify-content: center;
+    padding: 0.5rem;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+/* Icon styles */
+.icon-sun::before {
+  content: "☀️";
+}
+.icon-moon::before {
+  content: "🌙";
+}
+.icon-monitor::before {
+  content: "🖥️";
+}

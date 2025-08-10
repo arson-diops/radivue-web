@@ -1,0 +1,152 @@
+.app-header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  box-shadow: var(--shadow-sm);
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  max-width: 100%;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.app-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--brand-primary);
+  margin: 0;
+}
+
+.app-subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s;
+
+  &:hover,
+  &.active {
+    color: var(--brand-primary);
+    background-color: var(--state-hover);
+    cursor: pointer;
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-name {
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.user-role {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: var(--btn-danger-bg);
+    color: var(--btn-danger-text);
+    border-color: var(--btn-danger-bg);
+  }
+}
+
+/* Icon placeholders */
+[class^="icon-"]::before {
+  content: "●";
+  margin-right: 0.5rem;
+}
+
+.icon-dashboard::before {
+  content: "📊";
+  margin-right: 0;
+}
+.icon-survey::before {
+  content: "📋";
+  margin-right: 0;
+}
+.icon-area::before {
+  content: "🗺️";
+  margin-right: 0;
+}
+.icon-equipment::before {
+  content: "⚡";
+  margin-right: 0;
+}
+.icon-reports::before {
+  content: "📈";
+  margin-right: 0;
+}
+.icon-users::before {
+  content: "👥";
+  margin-right: 0;
+}
+.icon-logout::before {
+  content: "🚪";
+  margin-right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .header-content {
+    padding: 1rem;
+  }
+
+  .user-info {
+    display: none;
+  }
+}

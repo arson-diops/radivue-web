@@ -1,0 +1,81 @@
+// Dark theme specific variables
+[data-theme="dark"] {
+  // Surface Colors
+  --surface-primary: var(--color-gray-900);
+  --surface-secondary: var(--color-gray-800);
+  --surface-tertiary: var(--color-gray-700);
+
+  // Background Colors
+  --bg-primary: var(--color-black);
+  --bg-secondary: var(--color-gray-900);
+  --bg-accent: var(--color-gray-800);
+
+  // Text Colors
+  --text-primary: var(--color-gray-100);
+  --text-secondary: var(--color-gray-300);
+  --text-tertiary: var(--color-gray-400);
+  --text-inverse: var(--color-gray-900);
+
+  // Border Colors
+  --border-primary: var(--color-gray-700);
+  --border-secondary: var(--color-gray-600);
+  --border-focus: var(--brand-primary);
+
+  // Interactive States
+  --state-hover: rgba(59, 130, 246, 0.1);
+  --state-active: rgba(59, 130, 246, 0.2);
+  --state-focus: rgba(59, 130, 246, 0.3);
+  --state-disabled: var(--color-gray-800);
+
+  // Component Specific
+  --sidebar-bg: var(--surface-primary);
+  --sidebar-border: var(--border-primary);
+  --header-bg: var(--surface-primary);
+  --header-border: var(--border-primary);
+  --footer-bg: var(--surface-primary);
+  --footer-border: var(--border-primary);
+
+  // Button Variants (same as light for consistency)
+  --btn-primary-bg: var(--brand-primary);
+  --btn-primary-text: var(--text-inverse);
+  --btn-primary-hover: #1d4ed8;
+
+  --btn-secondary-bg: var(--surface-tertiary);
+  --btn-secondary-text: var(--text-primary);
+  --btn-secondary-hover: var(--color-gray-600);
+
+  --btn-success-bg: var(--color-success);
+  --btn-success-text: var(--color-white);
+  --btn-success-hover: #15803d;
+
+  --btn-warning-bg: var(--color-warning);
+  --btn-warning-text: var(--color-white);
+  --btn-warning-hover: #d97706;
+
+  --btn-danger-bg: var(--color-danger);
+  --btn-danger-text: var(--color-white);
+  --btn-danger-hover: #b91c1c;
+
+  // Environment Colors
+  --env-local-bg: var(--color-info-50);
+  --env-local-fg: var(--color-info-dark);
+
+  --env-preview-bg: var(--color-info-50);
+  --env-preview-fg: var(--color-info-dark);
+
+  --env-develop-bg: var(--color-success-50);
+  --env-develop-fg: var(--color-success-dark);
+
+  --env-staging-bg: var(--color-danger-50);
+  --env-staging-fg: var(--color-danger-dark);
+
+  --env-production-bg: var(--color-warning-50);
+  --env-production-fg: var(--color-warning-dark);
+
+  // Online/Offline Status Variants
+  --status-online-bg: var(--color-success-50);
+  --status-online-fg: var(--color-success-dark);
+
+  --status-offline-bg: var(--color-danger-50);
+  --status-offline-fg: var(--color-danger-dark);
+}

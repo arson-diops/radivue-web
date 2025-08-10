@@ -1,0 +1,41 @@
+// Main theme entry point
+@import "variables";
+@import "light";
+@import "dark";
+
+// Component theme mixins
+@mixin button-variant($bg, $text, $hover) {
+  background-color: $bg;
+  color: $text;
+  border: 1px solid $bg;
+
+  &:hover:not(:disabled) {
+    background-color: $hover;
+    border-color: $hover;
+  }
+}
+
+@mixin surface-elevation($level: 1) {
+  @if $level == 1 {
+    box-shadow: var(--shadow-sm);
+  } @else if $level == 2 {
+    box-shadow: var(--shadow-md);
+  } @else if $level == 3 {
+    box-shadow: var(--shadow-lg);
+  } @else if $level == 4 {
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+@mixin focus-ring() {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+// Utility classes
+.theme-transition {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
