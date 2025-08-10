@@ -1,8 +1,7 @@
 name = "radivue-web"
-main = "workers-site/index.js"
 compatibility_date = "2025-08-10"
 account_id = "2d705bc339ba56204f391a423b0a41db"
 workers_dev = true
 
 [site]
-bucket = "./dist/radivue/browser"
+bucket = "dist/radivue-web/browser"
