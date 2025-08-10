@@ -1,0 +1,18 @@
+documentation:
+documentation:
+frontend:
+  - src/**
+  - radivue-web/**
+  - public/**
+  - angular.json
+  - package.json
+
+documentation:
+  - README.md
+
+config:
+  - tsconfig*.json
+  - angular.json
+
+assets:
+  - public/**
