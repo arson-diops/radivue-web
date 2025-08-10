@@ -1,18 +1,33 @@
-documentation:
-documentation:
 frontend:
   - src/**
   - radivue-web/**
   - public/**
   - angular.json
   - package.json
-
 documentation:
   - README.md
-
 config:
   - tsconfig*.json
   - angular.json
-
 assets:
   - public/**
+ci:
+  - .github/**
+  - .gitlab-ci.yml
+  - .circleci/**
+dependencies:
+  - package.json
+  - package-lock.json
+  - yarn.lock
+test:
+  - src/**/*.spec.ts
+  - tsconfig.spec.json
+styles:
+  - src/**/*.scss
+  - src/**/*.css
+  - src/styles.scss
+server:
+  - src/main.server.ts
+  - src/server.ts
+  - src/app/app.config.server.ts
+  - src/app/app.routes.server.ts
