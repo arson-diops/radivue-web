@@ -5,4 +5,4 @@ account_id = "2d705bc339ba56204f391a423b0a41db"
 workers_dev = true
 
 [site]
-bucket = "./public"
+bucket = "./dist/radivue/browser"
